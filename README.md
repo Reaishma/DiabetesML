@@ -1,4 +1,3 @@
-
 Diabetes Prediction Project 📊💻
 
 Overview 🤔
