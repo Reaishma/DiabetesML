@@ -28,7 +28,9 @@ To install the project, follow these steps:
 Usage 🤝
 
 To use the models, simply run the corresponding Python files:
+
 📄 For Logistic Regression Model: python Model1.py 🚀
+
 📄 For Multilayer Perceptron (MLP) Model: python Model2.py 🚀
 
 Code Snippets 💡
@@ -36,6 +38,7 @@ Code Snippets 💡
 ⭐️ Logistic Regression Model:
 model = LogisticRegression(max_iter=1000)
 model.fit(X_train, y_train) 
+
 ⭐️ Multilayer Perceptron (MLP) Model:
 model = MLPClassifier(hidden_layer_sizes=(64, 32), max_iter=1000)
 model.fit(X_train, y_train) 
