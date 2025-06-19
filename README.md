@@ -2,15 +2,18 @@
 Diabetes Prediction Project 📊💻
 
 Overview 🤔
+
 This project aims to develop predictive models that can accurately classify individuals as diabetic or non-diabetic based on their health metrics.
 
 Features 🎯
+
 ⭐️ *Machine Learning Model*: Logistic Regression model for diabetes prediction
 ⭐️ *Deep Learning Model*: Multilayer Perceptron (MLP) model for diabetes prediction
 
 Technologies Used 💻
 
 🔹 *Python*: The project is built using Python and utilizes popular libraries such as scikit-learn, pandas, and NumPy.
+
 🔹 *Scikit-learn*: The project uses scikit-learn for machine learning tasks, including logistic regression and multilayer perceptron (MLP) models.
 
 Installation 📦
@@ -27,7 +30,7 @@ https://github.com/Reaishma/DiabetesML'
 Usage 🤝
 
 To use the models, simply run the corresponding Python files:
-- For Logistic Regression 'model1.py`
+- For Logistic Regression 'model1.py
 - For Multilayer Perceptron (MLP) Model: `model2.py`
 
 Code Snippets 💡
@@ -40,6 +43,7 @@ model.fit(X_train, y_train)
 - Multilayer Perceptron (MLP) Model:
 model = MLPClassifier(hidden_layer_sizes=(64, 32), max_iter=1000)
 model.fit(X_train, y_train)
+
 
 Sample Output 📊
 
