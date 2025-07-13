@@ -246,9 +246,9 @@ textColor = "#262730"
 - Check browser compatibility
 - Clear browser cache
 
-##Developer🧑‍💻
+## Developer🧑‍💻
 
-** Reaishma N**
+ ** Reaishma N**
 
 ## 📄 License
 
@@ -293,7 +293,7 @@ This project serves as an excellent learning resource for:
 
 ---
 
-**Made with ❤️ for healthcare innovation and machine learning education**
+**Made with ❤️ for healthcare innovation and machine learning **
 
 
 
