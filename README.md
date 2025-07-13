@@ -293,7 +293,7 @@ This project serves as an excellent learning resource for:
 
 ---
 
-** Made with ❤️ for healthcare innovation and machine learning **
+**Made with ❤️ for healthcare innovation and machine learning**
 
 
 
