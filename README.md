@@ -248,7 +248,7 @@ textColor = "#262730"
 
 ## Developer🧑‍💻
 
- ** Reaishma N**
+ ** Reaishma N **
 
 ## 📄 License
 
@@ -293,7 +293,7 @@ This project serves as an excellent learning resource for:
 
 ---
 
-**Made with ❤️ for healthcare innovation and machine learning **
+** Made with ❤️ for healthcare innovation and machine learning **
 
 
 
