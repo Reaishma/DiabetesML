@@ -248,7 +248,7 @@ textColor = "#262730"
 
 ## Developer🧑‍💻
 
- ** Reaishma N **
+ **Reaishma N**
 
 ## 📄 License
 
