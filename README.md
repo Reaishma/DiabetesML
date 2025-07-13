@@ -225,7 +225,7 @@ textColor = "#262730"
 
 ## View Live Demo 
 
- [view demo](.   )
+ [view demo](https://reaishma.github.io/DiabetesML/)
 
 ## 🚨 Troubleshooting
 
