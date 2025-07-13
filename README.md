@@ -34,7 +34,7 @@ An interactive machine learning web application for diabetes prediction built wi
 1. **Clone or download the project**
    ```bash
    git clone <repository-url>
-   cd diabetes-prediction-ml
+   cd diabetesml
    ```
 
 2. **Install dependencies**
