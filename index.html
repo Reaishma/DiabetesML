@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🩺 Diabetes Prediction ML Model</title>
+    <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Mobile Menu Button -->
+        <button class="mobile-menu-btn" id="mobile-menu-btn">☰</button>
+        
+        <!-- Mobile Overlay -->
+        <div class="mobile-overlay" id="mobile-overlay"></div>
+        
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1>🩺 Diabetes Prediction ML Model</h1>
+                <p class="subtitle">An interactive machine learning application for diabetes prediction with comprehensive data analysis</p>
+            </div>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="sidebar">
+            <h3>📊 Navigation</h3>
+            <ul class="nav-menu">
+                <li><a class="nav-link active" data-page="overview">
+                    📈 Data Overview
+                </a></li>
+                <li><a class="nav-link" data-page="eda">
+                    🔍 Exploratory Data Analysis
+                </a></li>
+                <li><a class="nav-link" data-page="training">
+                    🤖 Model Training & Evaluation
+                </a></li>
+                <li><a class="nav-link" data-page="prediction">
+                    🔮 Prediction Interface
+                </a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Data Overview Page -->
+            <div id="overview-page" class="page active">
+                <h2>📊 Dataset Overview</h2>
+                
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <div class="metric-value" id="total-samples">442</div>
+                        <div class="metric-label">Total Samples</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value" id="features-count">10</div>
+                        <div class="metric-label">Features</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value" id="diabetes-cases">221</div>
+                        <div class="metric-label">Diabetes Cases</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value" id="no-diabetes-cases">221</div>
+                        <div class="metric-label">No Diabetes Cases</div>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h3>Dataset Sample</h3>
+                    <div class="table-container">
+                        <table id="dataset-table" class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Age</th>
+                                    <th>Sex</th>
+                                    <th>BMI</th>
+                                    <th>BP</th>
+                                    <th>S1</th>
+                                    <th>S2</th>
+                                    <th>S3</th>
+                                    <th>S4</th>
+                                    <th>S5</th>
+                                    <th>S6</th>
+                                    <th>Diabetes</th>
+                                </tr>
+                            </thead>
+                            <tbody id="dataset-tbody">
+                                <!-- Data will be populated by JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h3>Feature Descriptions</h3>
+                    <div class="feature-descriptions">
+                        <div class="feature-item">
+                            <strong>Age:</strong> Age of the patient
+                        </div>
+                        <div class="feature-item">
+                            <strong>Sex:</strong> Sex of the patient (1 = male, -1 = female)
+                        </div>
+                        <div class="feature-item">
+                            <strong>BMI:</strong> Body Mass Index
+                        </div>
+                        <div class="feature-item">
+                            <strong>BP:</strong> Average Blood Pressure
+                        </div>
+                        <div class="feature-item">
+                            <strong>S1:</strong> Total Serum Cholesterol
+                        </div>
+                        <div class="feature-item">
+                            <strong>S2:</strong> Low-Density Lipoproteins
+                        </div>
+                        <div class="feature-item">
+                            <strong>S3:</strong> High-Density Lipoproteins
+                        </div>
+                        <div class="feature-item">
+                            <strong>S4:</strong> Total Cholesterol / HDL
+                        </div>
+                        <div class="feature-item">
+                            <strong>S5:</strong> Log of Serum Triglycerides
+                        </div>
+                        <div class="feature-item">
+                            <strong>S6:</strong> Blood Sugar Level
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h3>Missing Values Check</h3>
+                    <div style="color: #0F5132; background-color: #D1E7DD; padding: 1rem; border-radius: 0.5rem;">
+                        ✅ No missing values found in the dataset!
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exploratory Data Analysis Page -->
+            <div id="eda-page" class="page">
+                <h2>🔍 Exploratory Data Analysis</h2>
+                
+                <div class="content-section">
+                    <h3>Target Variable Distribution</h3>
+                    <div id="target-distribution-chart" class="chart-container"></div>
+                </div>
+
+                <div class="content-section">
+                    <h3>Feature Distributions</h3>
+                    <div id="feature-distributions-chart" class="chart-container" style="height: 800px;"></div>
+                </div>
+
+                <div class="content-section">
+                    <h3>Feature Correlation Matrix</h3>
+                    <div id="correlation-matrix-chart" class="chart-container"></div>
+                </div>
+
+                <div class="content-section">
+                    <h3>Feature Distributions by Diabetes Status</h3>
+                    <div class="feature-selector">
+                        <label for="feature-select">Select feature to analyze:</label>
+                        <select id="feature-select">
+                            <option value="age">Age</option>
+                            <option value="sex">Sex</option>
+                            <option value="bmi">BMI</option>
+                            <option value="bp">Blood Pressure</option>
+                            <option value="s1">Total Serum Cholesterol</option>
+                            <option value="s2">Low-Density Lipoproteins</option>
+                            <option value="s3">High-Density Lipoproteins</option>
+                            <option value="s4">Total Cholesterol / HDL</option>
+                            <option value="s5">Log of Serum Triglycerides</option>
+                            <option value="s6">Blood Sugar Level</option>
+                        </select>
+                    </div>
+                    <div id="feature-boxplot-chart" class="chart-container"></div>
+                </div>
+            </div>
+
+            <!-- Model Training & Evaluation Page -->
+            <div id="training-page" class="page">
+                <h2>🤖 Model Training & Evaluation</h2>
+                
+                <div class="training-controls">
+                    <button id="train-models-btn" class="btn btn-primary">
+                        ▶️ Train Models
+                    </button>
+                    <div id="training-status" class="training-status"></div>
+                </div>
+
+                <div id="training-results" class="training-results" style="display: none;">
+                    <div class="content-section">
+                        <h3>Model Performance Comparison</h3>
+                        <div class="table-container">
+                            <table id="performance-table" class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>Model</th>
+                                        <th>Accuracy</th>
+                                        <th>Precision</th>
+                                        <th>Recall</th>
+                                        <th>F1-Score</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="performance-tbody">
+                                    <!-- Performance data will be populated -->
+                                </tbody>
+                            </table>
+                        </div>
+                        <div id="performance-chart" class="chart-container"></div>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>Confusion Matrices</h3>
+                        <div class="confusion-matrices">
+                            <div id="confusion-lr" class="confusion-matrix"></div>
+                            <div id="confusion-rf" class="confusion-matrix"></div>
+                            <div id="confusion-svm" class="confusion-matrix"></div>
+                        </div>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>ROC Curves</h3>
+                        <div id="roc-curves-chart" class="chart-container"></div>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>Feature Importance Analysis</h3>
+                        <div id="feature-importance-chart" class="chart-container"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Prediction Interface Page -->
+            <div id="prediction-page" class="page">
+                <h2>🔮 Diabetes Prediction Interface</h2>
+                
+                <div id="prediction-warning" class="warning-message">
+                    ⚠️ Please train the models first in the 'Model Training & Evaluation' page.
+                </div>
+
+                <div id="prediction-form" class="prediction-form" style="display: none;">
+                    <h3>Enter Patient Information</h3>
+                    
+                    <div class="input-grid">
+                        <div class="input-group">
+                            <label for="age-slider">Age:</label>
+                            <input type="range" id="age-slider" min="-3" max="3" step="0.1" value="0">
+                            <span id="age-value">0.0</span>
+                            <small>Standardized age value</small>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="sex-select">Sex:</label>
+                            <select id="sex-select">
+                                <option value="-1">Female</option>
+                                <option value="1">Male</option>
+                            </select>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="bmi-slider">BMI:</label>
+                            <input type="range" id="bmi-slider" min="-3" max="3" step="0.1" value="0">
+                            <span id="bmi-value">0.0</span>
+                            <small>Standardized BMI value</small>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="bp-slider">Blood Pressure:</label>
+                            <input type="range" id="bp-slider" min="-3" max="3" step="0.1" value="0">
+                            <span id="bp-value">0.0</span>
+                            <small>Standardized blood pressure value</small>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="s1-slider">Total Serum Cholesterol:</label>
+                            <input type="range" id="s1-slider" min="-3" max="3" step="0.1" value="0">
+                            <span id="s1-value">0.0</span>
+                            <small>Standardized cholesterol value</small>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="s2-slider">Low-Density Lipoproteins:</label>
+                            <input type="range" id="s2-slider" min="-3" max="3" step="0.1" value="0">
+                            <span id="s2-value">0.0</span>
+                            <small>Standardized LDL value</small>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="s3-slider">High-Density Lipoproteins:</label>
+                            <input type="range" id="s3-slider" min="-3" max="3" step="0.1" value="0">
+                            <span id="s3-value">0.0</span>
+                            <small>Standardized HDL value</small>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="s4-slider">Total Cholesterol / HDL:</label>
+                            <input type="range" id="s4-slider" min="-3" max="3" step="0.1" value="0">
+                            <span id="s4-value">0.0</span>
+                            <small>Standardized cholesterol ratio</small>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="s5-slider">Log of Serum Triglycerides:</label>
+                            <input type="range" id="s5-slider" min="-3" max="3" step="0.1" value="0">
+                            <span id="s5-value">0.0</span>
+                            <small>Standardized triglycerides value</small>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="s6-slider">Blood Sugar Level:</label>
+                            <input type="range" id="s6-slider" min="-3" max="3" step="0.1" value="0">
+                            <span id="s6-value">0.0</span>
+                            <small>Standardized blood sugar value</small>
+                        </div>
+                    </div>
+                    
+                    <button id="predict-btn" class="btn btn-primary">
+                        🔮 Predict Diabetes Risk
+                    </button>
+                    
+                    <div id="prediction-results" class="prediction-results" style="display: none;">
+                        <h3>Prediction Results</h3>
+                        <div class="results-grid">
+                            <div id="lr-result" class="result-card"></div>
+                            <div id="rf-result" class="result-card"></div>
+                            <div id="svm-result" class="result-card"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
