@@ -1,10 +1,12 @@
 # 🩺 Diabetes Prediction ML Model
 
 This is a machine learning application for diabetes prediction. The application provides an interactive interface for data analysis, model training, and prediction using various machine learning algorithms.
- 
+
+![overview](https://github.com/Reaishma/DiabetesML/blob/main/Screenshot_20250904-163203_1.jpg)
+
 # View Live Demo 
 
- view demo https://reaishma.github.io/DiabetesML/
+ **view demo** https://reaishma.github.io/DiabetesML/
 
 ## System Architecture
 
