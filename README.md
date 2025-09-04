@@ -113,6 +113,9 @@ The application features a sidebar navigation with four main sections:
 - Risk level indicators
 
 ### Data Processing
+
+![Diabetic prediction](https://github.com/Reaishma/DiabetesML/blob/main/Screenshot_20250904-163406_1.jpg)
+
 - **Dataset**: Scikit-learn diabetes dataset (converted from regression to binary classification)
 - **Features**: 10 physiological parameters (age, sex, BMI, blood pressure, cholesterol levels, etc.)
 - **Preprocessing**: StandardScaler for feature normalization
@@ -136,7 +139,7 @@ All models are evaluated using:
 ### Cross-Validation
 Models are validated using stratified cross-validation to ensure robust performance estimates across different data splits.
 
-##key Elements 
+## key Elements 
 
 ### Data Management
 - **Data Source**: Sklearn's built-in diabetes dataset (originally regression, converted to classification)
