@@ -144,6 +144,9 @@ Models are validated using stratified cross-validation to ensure robust performa
 - **Feature Engineering**: Uses 10 baseline physiological features from the original dataset
 
 ### Machine Learning Pipeline
+
+![machine learning](https://github.com/Reaishma/DiabetesML/blob/main/Screenshot_20250904-163242_1.jpg)
+
 - **Preprocessing**: StandardScaler for feature normalization
 - **Model Selection**: Three algorithms implemented:
   - Logistic Regression (linear baseline)
