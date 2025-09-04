@@ -27,6 +27,9 @@ This is a machine learning application for diabetes prediction. The application 
 ## 🌟 Features
 
 ### 📊 Data Analysis & Visualization
+
+![Data analysis](https://github.com/Reaishma/DiabetesML/blob/main/Screenshot_20250904-163220_1.jpg)
+
 - **Interactive Dataset Overview**: Complete statistics, feature descriptions, and data quality checks
 - **Exploratory Data Analysis**: Dynamic visualizations including correlation matrices, distribution plots, and feature analysis
 - **Real-time Insights**: Interactive charts powered by Plotly for better data understanding
