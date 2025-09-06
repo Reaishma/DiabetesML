@@ -284,7 +284,7 @@ Contributions are welcome! Please feel free to submit a Pull Request. For major 
 If you encounter any issues or have questions:
 - Open an issue on GitHub
 - Check the troubleshooting section above
-- Review the Streamlit documentation for UI-related questions
+
 
 ## 🙏 Acknowledgments
 
