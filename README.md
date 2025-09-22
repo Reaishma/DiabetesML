@@ -1,5 +1,7 @@
 # 🩺 Diabetes Prediction ML Model
 
+**Diabetes Ml on streamlit - https://diabetesml-uzvcstbd8mmxtcnuwbx5xr.streamlit.app/**
+
 This is a machine learning application for diabetes prediction. The application provides an interactive interface for data analysis, model training, and prediction using various machine learning algorithms.
 
 ![overview](https://github.com/Reaishma/DiabetesML/blob/main/Screenshot_20250904-163203_1.jpg)
