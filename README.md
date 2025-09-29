@@ -4,7 +4,7 @@
 
 # Access the project 
 
-**Diabetes Ml on streamlit - https://diabetesml-uzvcstbd8mmxtcnuwbx5xr.streamlit.app/**
+**Diabetes ML on streamlit - https://diabetesml-uzvcstbd8mmxtcnuwbx5xr.streamlit.app/**
 
 **Web Interface on https://reaishma.github.io/DiabetesML/**
 
