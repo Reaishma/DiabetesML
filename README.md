@@ -99,6 +99,9 @@ The application features a sidebar navigation with four main sections:
 - Missing values check
 
 **Visualization Features:**
+
+![feature](https://github.com/Reaishma/DiabetesML/blob/main/chrome_screenshot_Oct%2016%2C%202025%2010_42_57%20AM%20GMT%2B05_30.png)
+
 - Target variable distribution pie chart
 - Feature distribution histograms
 - Interactive correlation heatmap
