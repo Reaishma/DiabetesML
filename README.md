@@ -159,7 +159,7 @@ Models are validated using stratified cross-validation to ensure robust performa
 
 ### Machine Learning Pipeline
 
-![machine learning](https://github.com/Reaishma/DiabetesML/blob/main/Screenshot_20250904-163242_1.jpg)
+![machine learning](https://github.com/Reaishma/DiabetesML/blob/main/chrome_screenshot_Oct%2016%2C%202025%2010_44_51%20AM%20GMT%2B05_30.png)
 
 - **Preprocessing**: StandardScaler for feature normalization
 - **Model Selection**: Three algorithms implemented:
