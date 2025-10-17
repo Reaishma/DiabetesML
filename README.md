@@ -10,7 +10,7 @@
 
 This is a machine learning application for diabetes prediction. The application provides an interactive interface for data analysis, model training, and prediction using various machine learning algorithms.
 
-![overview](https://github.com/Reaishma/DiabetesML/blob/main/Screenshot_20250904-163203_1.jpg)
+![overview](https://github.com/Reaishma/DiabetesML/blob/main/chrome_screenshot_Oct%2016%2C%202025%2010_41_28%20AM%20GMT%2B05_30.png)
 
 
 
