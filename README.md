@@ -49,6 +49,9 @@ This is a machine learning application for diabetes prediction. The application 
 - **Feature Importance Analysis**: Understanding which factors contribute most to diabetes prediction
 
 ### 🔮 Interactive Prediction Interface
+
+![real time](https://github.com/Reaishma/DiabetesML/blob/main/chrome_screenshot_Oct%2016%2C%202025%2010_45_55%20AM%20GMT%2B05_30.png)
+
 - **User-friendly Input**: Sliders and selectors for all medical parameters
 - **Multi-model Predictions**: Get predictions from all three trained models simultaneously
 - **Confidence Scoring**: Probability estimates for risk assessment
