@@ -137,6 +137,8 @@ Data Loading → Preprocessing → Train/Test Split Datadel Training → Evaluat
 
 ## 📈 Model Performance
 
+![Model performance](https://github.com/Reaishma/DiabetesML/blob/main/chrome_screenshot_Oct%2016%2C%202025%2010_44_35%20AM%20GMT%2B05_30.png)
+
 ### Evaluation Metrics
 All models are evaluated using:
 - **Accuracy**: Overall prediction correctness
