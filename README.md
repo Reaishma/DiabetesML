@@ -126,7 +126,6 @@ The application features a sidebar navigation with four main sections:
 
 ### Data Processing
 
-![Diabetic prediction](https://github.com/Reaishma/DiabetesML/blob/main/Screenshot_20250904-163406_1.jpg)
 
 - **Dataset**: Scikit-learn diabetes dataset (converted from regression to binary classification)
 - **Features**: 10 physiological parameters (age, sex, BMI, blood pressure, cholesterol levels, etc.)
